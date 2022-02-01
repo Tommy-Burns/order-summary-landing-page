@@ -13,6 +13,15 @@ main {
     z-index: -1;
 }
 
+main .attribution {
+    position: absolute;
+    font-size: 0.8em;
+    bottom: 1rem;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 main .background {
     background-image: url("/images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
@@ -23,5 +32,180 @@ main .background {
     top: -10rem;
     -webkit-animation: bg-anim 1s ease-in-out;
     animation: bg-anim 1s ease-in-out;
-    
+
 }
+
+main .card {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    border-radius: 15px;
+    max-width: 400px;
+    background-color: white;
+    -webkit-filter: drop-shadow(0.40em 0.40em 0.40em #7280a7);
+    filter: drop-shadow(0.40em 0.40em 0.40em #7280a7);
+    -webkit-animation: card-anim 1s ease-in-out;
+    animation: card-anim 1s ease-in-out;
+}
+
+main .cardhero {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+main .card .main_content {
+    text-align: center;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+}
+
+main .card .main_content .order_header {
+    font-size: 1.5rem;
+    font-weight:1000;
+}
+
+main .card .main_content .order_description {
+    font-size:0.9em;
+    margin-top: 1em;
+    opacity: .5;
+    line-height: 1.2;
+}
+
+main .card .main_content .order_plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: #f0f3ff;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+main .card .main_content .order_plan_details {
+    margin-left: 1rem;
+    font-weight: 550;
+    font-size: 0.9em;
+}
+
+main .card .main_content .order_plan_details span {
+    opacity: .55;
+    font-size: 1em;
+}
+
+main .card .main_content .change_order_plan {
+    color: #3829e0;
+    font-weight: 800;
+    margin-left: auto;
+    font-size: 0.9em;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+}
+
+main .card .main_content .change_order_plan:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+main .card .main_content .order_btn {
+    display: -ms-grid;
+    display: grid;
+}
+
+main .card .main_content .order_btn--btn {
+    text-decoration: none;
+    padding: 1em 2em;
+    font-size: 0.9em;
+    font-weight: 800;
+    width: 100%;
+}
+
+main .card .main_content .order_btn_proceed {
+    color: white;
+    margin-top: .5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color:#3829e0;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+    -webkit-filter: drop-shadow(0.05em 0.9em 0.5em #b1aafc);
+    filter: drop-shadow(0.05em 0.9em 0.5em #b1aafc);
+}
+
+main .card .main_content .order_btn_proceed:hover {
+    /* opacity: .5; */
+    background-color:#047fc7;
+    -webkit-filter: drop-shadow(0.05em 0.9em 0.5em #b8d9ff);
+    filter: drop-shadow(0.05em 0.9em 0.5em #b8d9ff);
+}
+
+main .card .main_content .order_btn_cancel {
+    color: black;
+    margin-top: .5rem;
+    opacity: .7;
+    font-weight: 800;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+    margin-bottom: 1.5rem;
+}
+
+main .card .main_content .order_btn_cancel:hover {
+    opacity: 1;
+    color: rgb(255, 102, 102);
+}
+
+
+
+@-webkit-keyframes bg-anim {
+    from {
+      nav-left: -20rem;
+      opacity: .5;
+    }
+    to {
+      nav-right: -10rem;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bg-anim {
+    from {
+      left: -20rem;
+      opacity: .5;
+    }
+    to {
+      right: -10rem;
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes card-anim {
+    from {
+      top: 65%;
+      opacity: .5;
+    }
+    to {
+      down: 50%;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes card-anim {
+    from {
+      top: 65%;
+      opacity: .5;
+    }
+    to {
+      down: 50%;
+      opacity: 1;
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .card {
+      width: 330px;
+    }
+  }
